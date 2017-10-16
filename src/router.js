@@ -22,59 +22,18 @@ export default (
             
                 <Route exact path= '/' component ={ NextBtn }  />
 
-                <Route path='/wOne' component ={ WizardOne } />
-                <Route path="/wTwo" component ={ WizardTwo } />
-                <Route path="/wThree" component ={ WizardThree } />
-                <Route path='/wFour'  component ={ WizardFour } />
-                <Route path="/wFive" component ={ WizardFive } />
-                <Route path="/wSix" component ={ WizardSix }/>
-                <Route path="/wSeven" component ={ WizardSeven }/>
-                <Route 
-                    path="/wEight" 
-                    render={ ()=> <WizardEight 
-                                    history={history} 
-                                    updateHistory ={updateHistory} /> } 
-                />
-                <Route
-                    path="/wNine" 
-                    render={ ()=> <WizardNine 
-                                    addressOne={addressOne} 
-                                    addressTwo={addressTwo} 
-                                    addressThree={addressThree} 
-                                    updateAddLineOne={updateAddLineOne} 
-                                    updateAddLineTwo={updateAddLineTwo} 
-                                    updateAddLineThree={updateAddLineThree} /> } 
-                />
-                <Route 
-                    path="/wTen"
-                    render={ ()=> <WizardTen 
-                                    firstName={firstName} 
-                                    lastName={lastName} email={email} 
-                                    updateFirst={updateFirst} 
-                                    updateLast={updateLast} 
-                                    updateEmail={updateEmail} /> } 
-                />
-                <Route 
-                    path="/wEleven"
-                    render={ ()=> <WizardEleven 
-                                    firstName={firstName} 
-                                    lastName={lastName} 
-                                    email={email} 
-                                    loanType={loanType} 
-                                    propType={propType} 
-                                    propToBeUsedOn={propToBeUsedOn} 
-                                    city={city} 
-                                    found={found} 
-                                    realEstateAgent={realEstateAgent} 
-                                    downPayment={downPayment} 
-                                    cost={cost} 
-                                    credit={credit} 
-                                    history={history} 
-                                    addressOne={addressOne}
-                                    addressTwo={addressTwo} 
-                                    addressThree={addressThree} /> } 
-                />
-                <Route path='/finish' component={Finish} />
+                <Route path='/wOne' component={ WizardOne } />
+                <Route path="/wTwo" component={ WizardTwo } />
+                <Route path="/wThree" component={ WizardThree } />
+                <Route path='/wFour'  component={ WizardFour } />
+                <Route path="/wFive" component={ WizardFive } />
+                <Route path="/wSix" component={ WizardSix }/>
+                <Route path="/wSeven" component={ WizardSeven }/>
+                <Route path="/wEight" component={ WizardEight } />
+                <Route path="/wNine" component={ WizardNine } />
+                <Route path="/wTen" component={ WizardTen } />
+                <Route path="/wEleven" component={ WizardEleven } />
+                <Route path="/finish" component={Finish} />
             </div>
     </HashRouter>
 );
