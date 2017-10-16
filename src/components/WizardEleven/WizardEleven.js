@@ -148,4 +148,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStatetoProps)(WizardEleven);
+export default connect(mapStateToProps)(WizardEleven);
