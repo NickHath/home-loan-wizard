@@ -23,6 +23,17 @@ const UPDATE_CITY = 'UPDATE_CITY';
 const UPDATE_PROP = 'UPDATE_PROP';
 const UPDATE_FOUND = 'UPDATE_FOUND';
 
+const UPDATE_REAL_ESTATE_AGENT = 'UPDATE_REAL_ESTATE_AGENT';
+const UPDATE_COST ='UPDATE_COST';
+const UPDATE_DOWNPAYMENT ='UPDATE_DOWNPAYMENT';
+const UPDATE_CREDIT = 'UPDATE_CREDIT';
+const UPDATE_HISTORY = 'UPDATE_HISTORY';
+const UPDATE_ADDRESS_ONE ='UPDATE_ADDRESS_ONE';
+const UPDATE_ADDRESS_TWO ='UPDATE_ADDRESS_TWO';
+const UPDATE_ADDRESS_THRE ='UPDATE_ADDRESS_THREE';
+///need to finish update address in wizard 
+
+
 function reducer(state = initialState, action){
     switch(action.type){
         case UPDATE_LOAN_TYPE :
@@ -36,6 +47,25 @@ function reducer(state = initialState, action){
             return Object.assign({}, state, { propsToBeUsedOn: action.payload })
         case UPDATE_FOUND:
             return Object.assign({}, state, { found: action.payload })
+
+        case UPDATE_REAL_ESTATE_AGENT:
+            return Object.assign({},state, { realEstateAgent: action.payload })
+        case UPDATE_COST:
+            return Object.assign({},state, { cost: action.payload } )
+        case UPDATE_DOWNPAYMENT:
+            return Object.assign({},state, { downPayment: action.payload } )
+        case UPDATE_CREDIT:
+            return Object.assign({},state, { credit: action.payload } )
+        case UPDATE_HISTORY:
+            return Object.assign({},state, { history: action.payload } )
+        
+        case UPDATE_ADDRESS_ONE:
+            return Object.assign({},state, { addressOne: action.payload } )
+        case UPDATE_ADDRESS_TWO:
+            return Object.assign({},state, { addressTwo: action.payload } )
+        case UPDATE_ADDRESS_THREE:
+            return Object.assign({},state, { addressThree: action.payload } )
+        
         default:
             return state;
     }
@@ -76,6 +106,60 @@ export function updateFound(found) {
     type: UPDATE_FOUND,
     payload: found
   }
+}
+
+export function updateAgent(agent){
+    return{
+        type: UPDATE_REAL_ESTATE_AGENT,
+        payload: agent
+    }
+}
+
+export function updateCost(cost){
+    return{
+        type:UPDATE_COST,
+        payload:cost
+    }
+}
+
+export function updateDownPayment(downpayment){
+    return{
+        type: UPDATE_DOWNPAYMENT,
+        payload: downpayment
+    }
+}
+
+export function updateCredit(credit){
+    return{
+        type: UPDATE_CREDIT,
+        payload: credit
+    }
+}
+
+export function updateHistory(history){
+    return{
+        type: UPDATE_HISTORY,
+        payload: history
+    }
+}
+
+export function updateAddressOne(address){
+    return{
+        type:UPDATE_ADDRESS_ONE,
+        payload:address
+    }
+}
+export function updateAddressTwo(address){
+    return{
+        type:UPDATE_ADDRESS_TWO,
+        payload:address
+    }
+}
+export function updateAddressThree(address){
+    return{
+        type:UPDATE_ADDRESS_THREE,
+        payload:address
+    }
 }
 
 export default reducer;
