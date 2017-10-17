@@ -31,7 +31,9 @@ const UPDATE_HISTORY = 'UPDATE_HISTORY';
 const UPDATE_ADDRESS_1 ='UPDATE_ADDRESS_1';
 const UPDATE_ADDRESS_2 ='UPDATE_ADDRESS_2';
 const UPDATE_ADDRESS_3 ='UPDATE_ADDRESS_3';
-
+const UPDATE_FIRST = "UPDATE_FIRST";
+const UPDATE_LAST = "UPDATE_LAST";
+const UPDATE_EMAIL = "UPDATE_EMAIL";
 
 
 function reducer(state = initialState, action){
@@ -66,6 +68,13 @@ function reducer(state = initialState, action){
         case UPDATE_ADDRESS_3:
             return Object.assign({},state, { addressThree: action.payload } )
         
+        case UPDATE_FIRST:
+            return Object.assign( {}, state, { firstName: action.payload } );
+        case UPDATE_LAST:
+            return Object.assign( {}, state, { lastName: action.payload } );
+        case UPDATE_EMAIL:
+            return Object.assign( {}, state, { email: action.payload } );
+
         default:
             return state;
     }
@@ -160,6 +169,27 @@ export function updateAddress3(address){
         type:UPDATE_ADDRESS_3,
         payload:address
     }
+}
+
+export function updateFirst( first ) {
+    return {
+      type: UPDATE_FIRST,
+      payload: first
+    };
+}
+  
+export function updateLast( last ) {
+    return {
+      type: UPDATE_LAST,
+      payload: last
+    };
+}
+  
+export function updateEmail( email ) {
+    return {
+      type: UPDATE_EMAIL,
+      payload: email
+    };
 }
 
 export default reducer;
