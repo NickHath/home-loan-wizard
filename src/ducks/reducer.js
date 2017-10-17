@@ -28,10 +28,10 @@ const UPDATE_COST ='UPDATE_COST';
 const UPDATE_DOWNPAYMENT ='UPDATE_DOWNPAYMENT';
 const UPDATE_CREDIT = 'UPDATE_CREDIT';
 const UPDATE_HISTORY = 'UPDATE_HISTORY';
-const UPDATE_ADDRESS_ONE ='UPDATE_ADDRESS_ONE';
-const UPDATE_ADDRESS_TWO ='UPDATE_ADDRESS_TWO';
-const UPDATE_ADDRESS_THRE ='UPDATE_ADDRESS_THREE';
-///need to finish update address in wizard 
+const UPDATE_ADDRESS_1 ='UPDATE_ADDRESS_1';
+const UPDATE_ADDRESS_2 ='UPDATE_ADDRESS_2';
+const UPDATE_ADDRESS_3 ='UPDATE_ADDRESS_3';
+
 
 
 function reducer(state = initialState, action){
@@ -59,11 +59,11 @@ function reducer(state = initialState, action){
         case UPDATE_HISTORY:
             return Object.assign({},state, { history: action.payload } )
         
-        case UPDATE_ADDRESS_ONE:
+        case UPDATE_ADDRESS_1:
             return Object.assign({},state, { addressOne: action.payload } )
-        case UPDATE_ADDRESS_TWO:
+        case UPDATE_ADDRESS_2:
             return Object.assign({},state, { addressTwo: action.payload } )
-        case UPDATE_ADDRESS_THREE:
+        case UPDATE_ADDRESS_3:
             return Object.assign({},state, { addressThree: action.payload } )
         
         default:
@@ -143,21 +143,21 @@ export function updateHistory(history){
     }
 }
 
-export function updateAddressOne(address){
+export function updateAddress1(address){
     return{
-        type:UPDATE_ADDRESS_ONE,
+        type:UPDATE_ADDRESS_1,
         payload:address
     }
 }
-export function updateAddressTwo(address){
+export function updateAddress2(address){
     return{
-        type:UPDATE_ADDRESS_TWO,
+        type:UPDATE_ADDRESS_2,
         payload:address
     }
 }
-export function updateAddressThree(address){
+export function updateAddress3(address){
     return{
-        type:UPDATE_ADDRESS_THREE,
+        type:UPDATE_ADDRESS_3,
         payload:address
     }
 }

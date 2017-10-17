@@ -21,7 +21,7 @@ class WizardEight extends Component {
         )
     }
 }
-function mapStateToProps(){
+function mapStateToProps(state){
     return { updateHistory: state.updateHistory }
 }
 
